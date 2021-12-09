@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Log In</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="bg-img">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6" offset="3">
+          <ion-img src="../../assets/auth.png"></ion-img>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <form #f="ngForm" (submit)="logIn(f.value)">
+            <ion-item class="ion-margin-bottom" lines="full">
+              <ion-label position="floating">Email</ion-label>
+              <ion-input ngModel name="email" email required></ion-input>
+            </ion-item>
+      
+            <ion-item lines="full">
+              <ion-label position="floating">Password</ion-label>
+              <ion-input ngModel name="password" type="password" required></ion-input>
+            </ion-item>
+        
+            <ion-row>
+              <ion-col>
+                <ion-button type="submit" color="danger" expand="block">Sign In</ion-button>
+              </ion-col>
+            </ion-row>
+          
+          </form>
+          <ion-row>
+            <ion-col>
+              <ion-button (click)="goToRegister()" type="submit" color="success" expand="block">Register</ion-button>
+            </ion-col>
+            <ion-col>
+              <ion-button (click)="goToResetPwd()" type="submit" color="primary" expand="block">Forgot Password</ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+   </ion-grid>
+    
+  </div>
+</ion-content>

@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Password Reset</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="bg-img">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <form #f="ngForm" (submit)="resetPwd(f.value)">
+            <ion-item class="ion-margin-bottom" lines="full">
+              <ion-label position="floating">Email</ion-label>
+              <ion-input ngModel name="email" email required></ion-input>
+            </ion-item>
+        
+            <ion-row>
+              <ion-col>
+                <ion-button type="submit" color="danger" expand="block">Reset Now</ion-button>
+              </ion-col>
+            </ion-row>
+          
+          </form>
+        </ion-col>
+      </ion-row>
+   </ion-grid>
+    
+  </div>
+</ion-content>
